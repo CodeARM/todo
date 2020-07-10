@@ -28,16 +28,25 @@
          </li>
       </ul>
     </div>
-  </nav>
+</nav>
 
+<div class="mosca">
 <h3>Tasks</h3>
 
 <form method="POST" action='/'>
     {% csrf_token %}
-    {{form}}
+    <div class="item-row">{{form.title}}<span>title</span></div>
+    <div class="item-row">{{form.project}}<span>project</span></div>
+    <div class="item-row">{{form.area}}<span>area</span></div>
+    <div class="item-row">{{form.when}}<span>when</span></div>
+    <div class="item-row">{{form.where}}<span>where</span></div>    
+    <div class="item-row">{{form.complete}}<span>complete?</span></div>
+
     <input type="submit" name="Create Task">
 </form>
+</div>
 
+<div>
 {% for task in tasks %}
 <div>
     <a href="{% url 'update_task' task.id %}">Update</a>
@@ -48,8 +57,8 @@
     {% else %}
     <span>{{task}}</span>
     {% endif %}
+</div> 
 
-    
 </div>
 
 {% endfor %}
