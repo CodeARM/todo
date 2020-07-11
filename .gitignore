@@ -1,1 +1,14 @@
 
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# other #
+######################
+*.pyc
+.tasks/__pycache__/
+.tasks/migrations/__pycache__/*
+.todo/__init__.py
+.todo/__pycache__
