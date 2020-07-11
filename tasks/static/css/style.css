@@ -1,11 +1,22 @@
 div {
-    background-color: aquamarine;
+    margin-left: 20px;
 }
 
 h3 {
-    background-color: brown;
+    background-color: orange;
 }
 
 body {
     background-color: cadetblue;
+}
+.mosca {
+    background-color: cadetblue;
+}
+.list-of-tasks {
+    background-color: orchid;
+}
+.item-row {
+}
+span {
+    margin: 5px;
 }
