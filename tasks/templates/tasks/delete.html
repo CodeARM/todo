@@ -1,8 +1,14 @@
-<p>Are you sure you want to delete "{{item}}"?</p>
+{% extends 'tasks/main.html' %}
 
-<a href="{% url 'list' %}" >Cancel</a>
+{% block content %}
+<h3 class="delete-task">Delete Task</h3>
+<p>Are you sure you want to delete <span class="task-title">{{item}}</span>?</p>
+
+<a href="{% url 'list' %}">Cancel</a>
 
 <form method="POST" action="">
     {% csrf_token %}
     <input type="submit" name="confirm">
 </form>
+
+{% endblock %}

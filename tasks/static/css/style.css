@@ -22,3 +22,6 @@ span {
     background-color: cyan;
 
 }
+.delete-task {
+    background-color: red;
+}
