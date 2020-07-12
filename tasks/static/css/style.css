@@ -19,13 +19,14 @@ body {
     background-color: orchid;
 }
 .item-row {
-    
+
 }
 span {
     margin: 5px;
-    background-color: cyan;
 }
 .task-title {
     font-family: 'Courier New', Courier, monospace;
     font-size: large;
+    background-color: cyan;
+
 }
