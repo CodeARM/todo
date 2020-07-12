@@ -20,21 +20,21 @@
 </div>
 
 <div>
-<div>
+<div class="container">
   {% for task in tasks %}
   
-<div></div>
+<div>
   <!-- {% if task.complete == True %}
     <strike>{{task}}</strike>
   {% else %} -->
-  <span>{{task}} | </span>
+  <span class="task-title">{{task}} | </span>
+  <span>{{task.area}} | </span>
   <span>{{task.project}} | </span>
   <span>{{task.where}} | </span>
   <span>{{task.when}} | </span>
-  <span>{{task.area}} | </span>
   <a href="{% url 'update_task' task.id %}">Update</a>
-  <a href="{% url 'delete' task.id %}">Delete</a>
-  </div>
+  <a class="danger" href="{% url 'delete' task.id %}">Delete</a>
+</div>
   <!-- {% endif %} -->
 </div> 
 </div>
