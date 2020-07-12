@@ -6,20 +6,16 @@ h3 {
     background-color: orange;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-
 }
 
 body {
     background-color: cadetblue;
 }
 
-.list-of-tasks {
-    background-color: orchid;
-}
-
 span {
     margin: 5px;
 }
+
 .task-title {
     font-family: 'Courier New', Courier, monospace;
     font-size: large;
