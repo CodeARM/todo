@@ -42,7 +42,7 @@ def deleteTask(request, pk):
     return render(request, 'tasks/delete.html', context)
 
 def where(request):
-    return render (request, 'where.html')
+    return render(request, 'tasks/where.html')
 
 def when(request):
     return HttpResponse('when.html')

@@ -1,17 +1,20 @@
+
+
 <h3>Areas of Focus</h3>
 <form method="POST" action='/'>
     {% csrf_token %}
-    {{form.aof}}
+    <div class="item-row">{{form.aof}}<span>aof</span></div>
+    <div class="item-row">{{form.describe}}<span>describe</span></div>    
     <input type="submit" name="Create Area">
 </form>
 
-<!-- {% for area in area?? %}
+{% for area in area %}
 <div>
     <a href="{% url 'update_task' task.id %}">Update</a>
-    <a href="{% url 'delete' task.id %}">Delete</a> -->
+    <a href="{% url 'delete' task.id %}">Delete</a>
 
 <p>{{aof}} </p>
 {% endfor %}
 
     
-</div>  -->
+</div> 
