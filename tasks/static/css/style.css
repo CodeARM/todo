@@ -12,15 +12,11 @@ h3 {
 body {
     background-color: cadetblue;
 }
-.mosca {
-    background-color: cadetblue;
-}
+
 .list-of-tasks {
     background-color: orchid;
 }
-.item-row {
 
-}
 span {
     margin: 5px;
 }
