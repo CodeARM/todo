@@ -45,10 +45,10 @@ def where(request):
     return render(request, 'tasks/where.html')
 
 def when(request):
-    return HttpResponse('when.html')
+    return render(request, 'tasks/when.html')
 
 def project(request):
-    return HttpResponse('project')
+    return render(request, 'tasks/project.html')
 
 def area(request):    
 
