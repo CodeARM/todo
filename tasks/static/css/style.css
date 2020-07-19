@@ -6,6 +6,7 @@ h3 {
     background-color: orange;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+    padding-left: 10px;
 }
 
 body {

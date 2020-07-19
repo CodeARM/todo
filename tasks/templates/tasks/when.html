@@ -1,5 +1,19 @@
 {% extends 'tasks/main.html' %}
+{% block content %}
 
-{% block content%}
 <h3>when</h3>
+<div>damn it, render</div>
+
+{% for task in tasks %}
+
+    <span class="task-title">{{task}} </span>
+    <span>{{task.project}} </span>
+    <span>{{task.where}} </span>
+    <span>{{task.when}} </span>
+    <a href="{% url 'update_task' task.id %}">Update</a>
+    <a class="danger" href="{% url 'delete' task.id %}">Delete</a>
+      <br />
+
+{% endfor %}
+<p>la</p>
 {% endblock %}
