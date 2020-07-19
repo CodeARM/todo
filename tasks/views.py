@@ -42,16 +42,35 @@ def deleteTask(request, pk):
     return render(request, 'tasks/delete.html', context)
 
 def where(request):
-    return render(request, 'tasks/where.html')
+    tasks = Task.objects.all()
+    form = TaskForm()
+
+    if request.method =='POST':
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect('/')
+
+    context = {'tasks':tasks, 'form':form}
+    return render(request, 'tasks/where.html', context)
 
 def when(request):
-    return render(request, 'tasks/when.html')
+    tasks = Task.objects.all()
+    form = TaskForm()
+
+    if request.method =='POST':
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect('/')
+
+    context = {'tasks':tasks, 'form':form}
+    return render(request, 'tasks/when.html', context)
 
 def project(request):
     return render(request, 'tasks/project.html')
 
 def area(request):    
-
     area = Area.objects.all()
     form = AreaForm()
 

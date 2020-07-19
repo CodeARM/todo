@@ -3,19 +3,20 @@
 {% block content %}
 
 <h3>Areas of Focus</h3>
+<div>
 <form method="POST" action='/'>
     {% csrf_token %}
-    <div class="item-row">{{form.aof}}<span>aof</span></div>
-    <div class="item-row">{{form.describe}}<span>describe</span></div>    
+    <p class="item-row">{{form.aof}}<span>aof</span></p>
+    <p class="item-row">{{form.describe}}<span>describe</span></p>    
     <input type="submit" name="Create Area">
 </form>
-
-{% for area in area %}
+</div>
 <div>
-    <a href="{% url 'update_task' task.id %}">Update</a>
-    <a href="{% url 'delete' task.id %}">Delete</a>
+    {% for area in area %}
+    <p><span>{{area.aof}} </span> <span>{{area.describe}} </span>
+    </p>
 
-<p>{{aof}} </p>
+</div>
 {% endfor %}
 
 </div> 
