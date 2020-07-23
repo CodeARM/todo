@@ -68,7 +68,17 @@ def when(request):
     return render(request, 'tasks/when.html', context)
 
 def project(request):
-    return render(request, 'tasks/project.html')
+    tasks = Task.objects.all()
+    form = TaskForm()
+
+    if request.method =='POST':
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect('/')
+
+    context = {'tasks':tasks, 'form':form}
+    return render(request, 'tasks/project.html', context)
 
 def area(request):    
     area = Area.objects.all()
@@ -78,7 +88,7 @@ def area(request):
         form = AreaForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('/')
+        return redirect('tasks/area.html')
 
     context = {'area':area, 'form':form}
     return render (request, 'tasks/area.html', context)

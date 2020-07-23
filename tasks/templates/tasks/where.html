@@ -2,12 +2,19 @@
 
 {% block content %}
 
-<h3>where</h3>
+<h3>Where</h3>
 
-<h4>home</h4>
+<div>
+    {% for task in tasks %}
+      <span class="journalist">{{task.where}} </span>
+      <span>{{task.when}} </span>
+      <span>{{task}} </span>
+      <span>{{task.project}} </span>
+    
+      <a href="{% url 'update_task' task.id %}">Update</a>
+      <a class="danger" href="{% url 'delete' task.id %}">Delete</a>
+      <br />
 
-<h4>work</h4>
-
-<h4>out</h4>
-
+    {% endfor %}
+    </div>
 {% endblock %}

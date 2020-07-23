@@ -8,8 +8,8 @@
 <div class="row">
 <div class="col-sm">
   {% for task in tasks %}
-  <span class="task-title">{{task}} </span>
   <span class="journalist">{{task.project}} </span>
+  <span class="">{{task}} </span>
   <span>{{task.where}} </span>
   <span>{{task.when}} </span>
   <a href="{% url 'update_task' task.id %}">Update</a>
