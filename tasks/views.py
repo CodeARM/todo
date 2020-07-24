@@ -91,4 +91,4 @@ def area(request):
         return redirect('tasks/area.html')
 
     context = {'area':area, 'form':form}
-    return render (request, 'tasks/area.html', context)
+    return render(request, 'tasks/area.html', context)

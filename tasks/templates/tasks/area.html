@@ -3,6 +3,7 @@
 {% block content %}
 
 <h3>Areas of Focus</h3>
+<div class="container">
 <div>
 <form method="POST" action='/'>
     {% csrf_token %}
@@ -11,14 +12,15 @@
     <input type="submit" name="Create Area">
 </form>
 </div>
-<div>
+
+<div class="col-sm">
     {% for area in area %}
-    <p><span>{{area.aof}} </span> <span>{{area.describe}} </span>
-    </p>
-
-</div>
+        <span>{{area.aof}} </span> 
+        <span>{{area.describe}} </span>
+<br />
 {% endfor %}
+</div>
+</div>
 
-</div> 
 
 {% endblock %}
