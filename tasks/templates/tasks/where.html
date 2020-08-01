@@ -6,15 +6,30 @@
 
 <div>
     {% for task in tasks %}
-      <span class="journalist">{{task.where}} </span>
+    <table>
+      <tr>
+        <td>
+      <span  id="most-important">{{task.where}} </span>
+        </td>
+        <td class="td2">
       <span>{{task.when}} </span>
+        </td>
+        <td class="td3">
       <span>{{task}} </span>
+        </td>
+        <td class="td4">
       <span>{{task.project}} </span>
-    
+        </td>
+        <td class="td5">
       <a href="{% url 'update_task' task.id %}">Update</a>
       <a class="danger" href="{% url 'delete' task.id %}">Delete</a>
-      <br />
+        </td>
+      </tr>
+    </table>
+    <br />
 
     {% endfor %}
     </div>
 {% endblock %}
+
+<script></script>

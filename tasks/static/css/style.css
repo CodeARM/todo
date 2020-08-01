@@ -16,17 +16,22 @@ body {
 span {
     margin: 5px;
 }
+
+td {
+    width: 100px;
+}
+
 .container {
     margin-right: 0px;
     margin-left: 0px;    
 }
 
-.journalist {
+/* .journalist {
     font-family: 'Courier New', Courier, monospace;
     font-size: large;
     background-color: cyan;
 
-}
+} */
 .delete-task {
     background-color: red;
 }
@@ -54,4 +59,10 @@ span {
 }
 .luxury-and-adventure {
     background-color: rgba(182, 1, 228, 0.7)
+}
+
+#most-important{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    background-color: cyan;
 }
