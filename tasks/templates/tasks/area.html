@@ -15,7 +15,7 @@
 
 <div class="col-sm">
     {% for area in area %}
-        <span class="athlete">{{area.aof}} </span> 
+        <span class="aof">{{area.aof}} </span> 
         <span>{{area.describe}} </span>
 <br />
 {% endfor %}
@@ -24,3 +24,6 @@
 
 
 {% endblock %}
+<script>
+document.getElementsByClassName("aof").style.background = 'white'
+</script>
