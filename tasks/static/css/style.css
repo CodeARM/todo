@@ -1,41 +1,28 @@
 div {
     margin-left: 20px;
 }
-
 h3 {
     background-color: orange;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     padding-left: 10px;
 }
-
 body {
     background-color: cadetblue;
 }
-
 span {
     margin: 5px;
 }
-/* 
-td {
-    width: 100px;
-} */
-
+.td {
+    width: 300px;
+}
 .container {
     margin-right: 0px;
     margin-left: 0px;    
 }
-
-/* .journalist {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: large;
-    background-color: cyan;
-
-} */
 .delete-task {
     background-color: red;
 }
-
 .athlete {
     background-color: rgba(229, 0, 0, 0.7)
 }
@@ -65,4 +52,21 @@ td {
     font-family: 'Courier New', Courier, monospace;
     font-size: large;
     background-color: cyan;
+    width: 150px;
+}
+
+#td-where {
+    width: 130px;
+}
+#td-when {
+    width: 100px;
+}
+#td-task {
+    width: 100px;
+}
+#td-area {
+    width: 100px;
+}
+#td-project {
+    width: 130px;
 }

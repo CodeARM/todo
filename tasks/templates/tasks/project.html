@@ -11,21 +11,21 @@
     {% for task in tasks %}
     <table>
       <tr>
-        <td>
-      <span  class="most-important">@{{task.where}} </span>
-        </td>
-        <td class="td2">
-      <span>///{{task.when}} </span>
-        </td>
-        <td class="td3">
-      <span> {{task}} </span>
-        </td>
-        <td class="td4">
-      <span>#{{task.project}} </span>
-        </td>
-        <td>
-          <span class="aof">[aof] {{task.area}} </span>
-            </td>
+      <!-- <td id="td-where">
+        <span class="">@{{task.where}}</span>
+      </td> -->
+      <!-- <td id="td-when">
+         <span>///{{task.when}}</span>
+      </td> -->
+      <!-- <td id="td-task">
+        <span>{{task}}</span>
+      </td> -->
+      <td id="td-project">
+        <span class="most-important">#{{task.project}}</span>
+      </td>
+      <td id="td-area">
+        <span class="aof">{{task.area}}</span>
+      </td>
         <td class="td5">
       <a href="{% url 'update_task' task.id %}">Update</a>
       <a class="danger" href="{% url 'delete' task.id %}">Delete</a>
