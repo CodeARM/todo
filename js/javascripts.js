@@ -1,12 +1,5 @@
 document.getElementById("most-important").style.background = 'white'
 
-can the logic be: 
-if a project's area has
- athelete, then color red for project
-elseif connected
-else if x 
-
-
 document.getElementsByClassName("most-important").style.background = 'white'
 
 
