@@ -7,7 +7,7 @@
 <div class="container">
 <div class="row">
 <div class="col-sm">
-  <div>
+<div>
     {% for task in tasks %}
     <table>
       <tr>
@@ -35,18 +35,8 @@
     <br />
 
     {% endfor %}
-    </div>
-  <!-- {% for task in tasks %}
-  <span class="journalist">{{task.project}} </span>
-  <span class="">{{task.area}} </span>
-  <span>{{task.where}} </span>
-  <span>{{task.when}} </span>
-  <span class="">{{task}} </span>
+</div>
 
-  <a href="{% url 'update_task' task.id %}">Update</a>
-  <a class="danger" href="{% url 'delete' task.id %}">Delete</a>
-    <br />
-  {% endfor %} -->
 </div>
 <div class="col-">
   <form method="POST" action='/'>
