@@ -8,20 +8,21 @@
     {% for task in tasks %}
     <table>
       <tr>
-        <td>
+        <td id="td-where">
       <span  class="most-important">@{{task.where}} </span>
         </td>
-        <td class="td2">
-      <span>///{{task.when}} </span>
+        <td id="td-task">
+          <span>{{task}}</span>
+            </td>
+        <td id="td-when">
+      <span>/// {{task.when}} </span>
         </td>
-        <td class="td3">
-      <span> {{task}} </span>
-        </td>
-        <td class="td4">
+        
+        <td id="td-project">
       <span>#{{task.project}} </span>
         </td>
-        <td>
-          <span class="aof">[aof] {{task.area}} </span>
+        <td id="td-area">
+          <span>{{task.area}}</span>
             </td>
         <td class="td5">
       <a href="{% url 'update_task' task.id %}">Update</a>
