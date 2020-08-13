@@ -43,3 +43,11 @@ $(document).ready(function(){
 .luxury-and-adventure {
     background-color: rgba(182, 1, 228, 0.7)
 }
+
+
+
+// $(:ul li:tg(0)") this will select all li elements of ul elements with an index of greater than 0
+// $(:ul li:eg(0)") this picks the first of the elements in a list
+// $(":contains(Athlete)") this will select all the elements taht contain the text Athlete
+
+// should I say 'if it's the first element in the list, then give it the class "most important"

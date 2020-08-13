@@ -5,11 +5,19 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="/static/css/style.css">
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-<!-- <script>
+<script>
   $(document).ready(function(){
-  $("span#most-important").hide();
-});
-  </script> -->
+    $("span").filter(":contains(athlete)").css("background-color", "rgba(229, 0, 0, 0.7)");
+    $("span").filter(":contains(mirror)").css("background-color", "rgba(229, 103, 0, 0.7)");
+    $("span").filter(":contains(connection)").css("background-color", "rgba(250, 237, 50, 0.7)");
+    $("span").filter(":contains(expand-professionally)").css("background-color", "rgba(229, 0, 0, 0.7)");
+    $("span").filter(":contains(security)").css("background-color", "rgba(229, 0, 0, 0.7)");
+    $("span").filter(":contains(work)").css("background-color", "rgba(0, 228, 224, 0.7)");
+    $("span").filter(":contains(technologist)").css("background-color", "rgba(0, 31, 228, 0.7)");
+    $("span").filter(":contains(luxury)").css("background-color", "rgba(182, 1, 228, 0.7)");
+  });
+  </script>
+
 
 </head>
 
