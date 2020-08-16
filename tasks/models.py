@@ -7,10 +7,10 @@ class Task(models.Model):
     title = models.CharField(max_length=200)
     complete = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
-    where = models.CharField(max_length=10, default="tbd")
-    when = models.CharField(max_length=10, default="tbd")
-    project = models.CharField(max_length=50, default="inbox")
-    area = models.CharField(max_length=75, default="none")
+    where = models.CharField(max_length=10, default="@where")
+    when = models.CharField(max_length=10, default="///when")
+    project = models.CharField(max_length=50, default="#inbox")
+    area = models.CharField(max_length=75, default="aof is?")
 
     def __str__(self):
         return self.title
