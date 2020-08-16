@@ -6,18 +6,19 @@
 <div class="container">
 <div class="row">
 
-<div class="col-sm">
+<div class="col">
 <form method="POST" action='/'>
     {% csrf_token %}
     <div class="item-row">{{form.title}}<span>title</span></div>
-    <div class="item-row">{{form.project}}<span>project</span></div>
-    <div class="item-row">{{form.area}}<span>area</span></div>
-    <div class="item-row">{{form.when}}<span>when</span></div>
+    <div class="item-row">{{form.project}}<span>#</span></div>
+    <div class="item-row">{{form.area}}<span>aof</span></div>
+    <div class="item-row">{{form.when}}<span>///</span></div>
     <div class="item-row">{{form.where}}<span>@</span></div>    
     <div class="item-row"><input type="submit" name="Create Task"></div>
 </form>
+</div>
 
-<div class="">
+<div class="col-8">
 <div>
   {% for task in tasks %}
   <table>
@@ -47,7 +48,6 @@
 
   {% endfor %}
 
-</div>
 </div>
 </div>
 </div>

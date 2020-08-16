@@ -1,5 +1,5 @@
 div {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 h3 {
     background-color: orange;
@@ -52,7 +52,7 @@ span {
     font-family: 'Courier New', Courier, monospace;
     font-size: large;
     background-color: cyan;
-    width: 150px;
+    width: 250px;
 }
 
 #td-where {

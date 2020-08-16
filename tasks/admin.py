@@ -6,3 +6,4 @@ from .models import *
 
 admin.site.register(Task)
 admin.site.register(Area)
+admin.site.register(Project)

@@ -21,3 +21,10 @@ class Area(models.Model):
 
     def __str__(self):
         return self.aof
+
+class Project(models.Model):
+    project = models.CharField(max_length=75, default="none")
+    define = models.CharField(max_length=500, default="none")
+
+    def __str__(self):
+        return self.project

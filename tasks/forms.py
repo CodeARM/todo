@@ -15,3 +15,9 @@ class AreaForm(forms.ModelForm):
     class Meta: 
         model = Area
         fields = '__all__'
+
+class ProjectForm(forms.ModelForm):
+
+    class Meta: 
+        model = Project
+        fields = '__all__'
