@@ -9,7 +9,7 @@
     <table>
       <tr>
         <td id="td-where">
-      <span  class="most-important">@{{task.where}} </span>
+      <span class="most-important">@ {{task.where}} </span>
         </td>
         <td id="td-task">
           <span>{{task}}</span>
@@ -32,8 +32,19 @@
     </table>
     <br />
 
+
     {% endfor %}
     </div>
 {% endblock %}
 
-<script></script>
+<!-- <script>
+  var where = [{where}];
+  document.getElementsByClassName("most-important").innerHTML = where;
+
+  function myFunction() {
+    where.sort();
+    where.reverse();
+    document.getElementsByClassName("most-important").innerHTML = where;
+  }
+</script> -->
+
