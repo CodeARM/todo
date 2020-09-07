@@ -47,7 +47,15 @@
         <li class="nav-item">
          <a class="nav-link" href="/where">@</a>
         </li>
-
+        {% if user.is_authenticated %}
+        <li class="nav-link"><span style="font-weight: bolder">{{ user.get_username }}
+          <a class="nav-item" href="{% url 'logout'%}?next={{request.path}}">Logout</a> </span>
+        </li>   
+   {% else %}
+     <li class="nav-link"><span style="font-weight: bolder">
+      <a class="nav-item" href="{% url 'login'%}?next={{request.path}}">Login</a></li>   
+   {% endif %} 
+  </ul>
       </ul>
     </div>
 </nav>
