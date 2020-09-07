@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset"UTF-8">
-    <title>Login</title>
-</head>
+{% extends 'tasks/main.html' %}
+{% block content %}
 <body>
+
         {% if form.errors %}
-        <p> there's somthing wrong with what you enterd</p>
+        <p> there's somthing wrong with what you entered</p>
         {% endif %}
 
         {% if next %}
@@ -22,5 +19,7 @@
         <input type="submit" = value="login">
         <input type="hidden" name="next" value="{{ next }}">
         </form>
+
+        {% endblock %}
 </body>
 </html>
