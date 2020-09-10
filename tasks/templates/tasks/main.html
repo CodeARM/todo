@@ -17,20 +17,24 @@
     $("span").filter(":contains(luxury)").css("background-color", "rgba(182, 1, 228, 0.7)");
   });
   </script>
-<script>
+  <script>
   $(document).ready(function(){
-
-  </script>
+    var date_input=$('input[name="date"]'); //our date input has the id "date"
+    var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+    var options={
+      format: 'mm/dd/yyyy',
+      container: container,
+      todayHighlight: true,
+      autoclose: true,
+    };
+    date_input.datepicker(options);
+  })
+</script>
 
 </head>
 
 <nav class="navbar navbar-expand-sm navbar-light bg-light">
-    <!-- <a class="navbar-brand" href="#">Todo</a> -->
-    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
   
-    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link" href="/">Home</a>
