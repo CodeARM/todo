@@ -9,8 +9,8 @@ class Task(models.Model):
     title = models.CharField(max_length=200)
     complete = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
-    where = models.CharField(max_length=10, default="@where")
-    when = models.CharField(max_length=10, default="///when")
+    where = models.DateField(auto_now_add=False, default="@where")
+    when = models.CharField(max_length=10, default="MM/DD/YYYY")
     project = models.CharField(max_length=50, default="#inbox")
     area = models.CharField(max_length=75, default="aof is?")
 
