@@ -29,7 +29,7 @@ def register(request):
 
 
 def index(request):
-    tasks = Task.objects.all()
+    tasks = Task.objects.all().order_by('title')
     form = TaskForm()
 
     if request.method =='POST':
@@ -64,7 +64,7 @@ def deleteTask(request, pk):
     return render(request, 'tasks/delete.html', context)
 
 def where(request):
-    tasks = Task.objects.all()
+    tasks = Task.objects.all().order_by('where')
     form = TaskForm()
 
     if request.method =='POST':
@@ -77,7 +77,7 @@ def where(request):
     return render(request, 'tasks/where.html', context)
 
 def when(request):
-    tasks = Task.objects.all()
+    tasks = Task.objects.all().order_by('when')
     form = TaskForm()
 
     if request.method =='POST':
@@ -90,7 +90,7 @@ def when(request):
     return render(request, 'tasks/when.html', context)
 
 def project(request):
-    tasks = Task.objects.all()
+    tasks = Task.objects.all().order_by('project')
     form = TaskForm()
 
     if request.method =='POST':
@@ -103,7 +103,7 @@ def project(request):
     return render(request, 'tasks/project.html', context)
 
 def area(request):    
-    area = Area.objects.all()
+    area = Area.objects.all().order_by('aof')
     form = AreaForm()
 
     if request.method =='POST':
