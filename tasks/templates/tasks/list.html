@@ -11,14 +11,31 @@
 <form method="POST" action='/'>
   <div class="form-group">
     {% csrf_token %}
-    <div class="item-row">{{form.title}}<span></span></div>
+    <!-- <div class="item-row">{{form.title}}<span></span></div>
     <div class="item-row">{{form.project}}<span></span></div>
     <div class="item-row">{{form.area}}<span></span></div>
-    <div class="item-row">{{form.when}}<span></span></div>
+    <div class="item-row" id="date">{{form.when}}<span></span></div> 
     <div class="item-row">{{form.where}}<span></span></div>    
+  </div> -->
+    <!-- <label class="control-label">Task</label> -->
+    <input class="form-control" placeholder="task" type="text"/>
+    
+    <!-- <label class="control-label">Project</label> -->
+    <input class="form-control" placeholder="#" type="text"/>
+    
+    <!-- <label class="control-label">Area</label> -->
+    <input class="form-control" placeholder="_a_" type="text"/>
+    
+    <!-- <label class="control-label">Where</label> -->
+    <input class="form-control" placeholder="@" type="text"/>
+    
+    <!-- <label class="control-label" for="date">Date</label> -->
+    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+    
+
     <div class="item-row"><input type="submit" name="Create Task"></div>
-</div
-  </form>
+  </div>
+</form>
 </div>
 
 
@@ -70,9 +87,23 @@
   {% endfor %}
 </div> -->
 
+<script>
+  $(document).ready(function(){
+    var date_input=$('input[name="date"]'); //our date input has the id "date"
+    var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+    var options={
+      format: 'mm/dd/yyyy',
+      container: container,
+      todayHighlight: true,
+      autoclose: true,
+    };
+    date_input.datepicker(options);
+  })
+</script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </html>
 
 {% endblock %}
