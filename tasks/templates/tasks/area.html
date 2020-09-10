@@ -47,11 +47,29 @@
         </tr>
 
     </table>
-    <!-- {% for area in area %}
-        <span class="aof">{{area.aof}} </span> 
-        <span>{{area.describe}} </span>
-<br />
-{% endfor %} -->
+
+
+</div>
+<div class="col-sm">
+    {% for aof in area %}
+    <table>
+      <tbody id="contentitems">
+      <tr>
+        <td id="td-area">
+            <span class="most-important">_a_{{task.area}} </span>
+        </td>
+        <td id="td-project">
+            <span>#{{task.project}} </span>
+        </td>
+        <td id="td-task">
+          <span>_{{title}}</span>
+        </td>
+        {% endfor %}
+
+      </tr>
+    </tbody>
+    </table>
+    <br />
 </div>
 </div>
 
