@@ -1,1 +1,0 @@
-requiremtns of python
